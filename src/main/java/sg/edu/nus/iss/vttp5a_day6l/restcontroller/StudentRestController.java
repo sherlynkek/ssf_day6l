@@ -16,7 +16,6 @@ import sg.edu.nus.iss.vttp5a_day6l.constant.Constant;
 import sg.edu.nus.iss.vttp5a_day6l.model.Student;
 import sg.edu.nus.iss.vttp5a_day6l.service.StudentService;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController

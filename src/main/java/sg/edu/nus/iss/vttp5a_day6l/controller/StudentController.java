@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import sg.edu.nus.iss.vttp5a_day6l.model.Student;
 
@@ -33,7 +32,7 @@ public class StudentController {
      public String getMethodName(Model model) {
         List<String> students = new ArrayList<>();
         model.addAttribute("students", students);
-        
+
         return "studentlist";
      }
      

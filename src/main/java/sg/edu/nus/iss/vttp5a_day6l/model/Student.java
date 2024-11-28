@@ -16,6 +16,10 @@ public class Student {
         this.phoneNumber = phoneNumber;
     }
 
+    public Student() {
+        //TODO Auto-generated constructor stub
+    }
+
     public Integer getId() {
         return id;
     }
