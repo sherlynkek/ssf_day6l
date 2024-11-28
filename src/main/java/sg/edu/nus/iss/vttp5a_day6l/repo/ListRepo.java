@@ -3,11 +3,11 @@ package sg.edu.nus.iss.vttp5a_day6l.repo;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
+// import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Repository;
 
-import sg.edu.nus.iss.vttp5a_day6l.util.*;
+// import sg.edu.nus.iss.vttp5a_day6l.util.*;
 
 @Repository
 public class ListRepo {
