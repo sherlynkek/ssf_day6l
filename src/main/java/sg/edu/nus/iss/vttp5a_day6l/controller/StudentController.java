@@ -5,6 +5,7 @@ import java.util.List;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
@@ -24,7 +25,9 @@ public class StudentController {
     }
 
     @PostMapping("")
-    public String postStudentForm(@ModelAttribute Student entity) {
+    public String postStudentForm(@ModelAttribute Student entity, BindingResult result, Model model) {
+        // if(result.hasError) {
+        // }
         return "redirect:/students/list";
     }
 
