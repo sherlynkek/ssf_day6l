@@ -32,7 +32,7 @@ public class StudentRestService {
 
     public static final String studentUrl = "http://localhost:3000/api/students";
 
-    public List<String> getAllStudents() {
+    public List<Student> getAllStudents() {
         // restTemplate.getForEntity(studentUrl, Student.class);
         ResponseEntity<String> data = restTemplate.getForEntity(studentUrl, String.class);
         String payload = data.getBody();

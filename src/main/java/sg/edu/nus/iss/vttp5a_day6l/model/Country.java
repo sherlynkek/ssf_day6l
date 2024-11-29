@@ -10,6 +10,10 @@ public class Country {
         this.name = name;
     }
 
+    public Country() {
+        //TODO Auto-generated constructor stub
+    }
+
     public String getCode() {
         return code;
     }

@@ -9,10 +9,10 @@ import java.util.Set;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
-import com.google.gson.JsonObject;
-
 import jakarta.json.Json;
+import jakarta.json.JsonObject;
 import jakarta.json.JsonReader;
+import jakarta.json.JsonValue;
 import sg.edu.nus.iss.vttp5a_day6l.constant.Url;
 import sg.edu.nus.iss.vttp5a_day6l.model.Country;
 
