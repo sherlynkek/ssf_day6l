@@ -1,23 +1,24 @@
 package sg.edu.nus.iss.vttp5a_day6l.model;
 
 public class Student {
+    
     private Integer id;
 
     private String fullName;
 
     private String email;
-    
+
     private String phoneNumber;
+
+    
+    public Student() {
+    }
 
     public Student(Integer id, String fullName, String email, String phoneNumber) {
         this.id = id;
         this.fullName = fullName;
         this.email = email;
         this.phoneNumber = phoneNumber;
-    }
-
-    public Student() {
-        //TODO Auto-generated constructor stub
     }
 
     public Integer getId() {
@@ -99,4 +100,5 @@ public class Student {
     public String toString() {
         return id + "," + fullName + "," + email + "," + phoneNumber;
     }
+    
 }

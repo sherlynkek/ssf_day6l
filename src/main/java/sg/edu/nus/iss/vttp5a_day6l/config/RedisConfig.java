@@ -1,8 +1,8 @@
 package sg.edu.nus.iss.vttp5a_day6l.config;
 
-import org.springframework.beans.factory.annotation.Configurable;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisClientConfiguration;
 import org.springframework.data.redis.connection.jedis.JedisConnectionFactory;
@@ -11,7 +11,7 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 
 import sg.edu.nus.iss.vttp5a_day6l.constant.*;
 
-@Configurable
+@Configuration
 public class RedisConfig {
     // Slide 17
     @Value("${spring.data.redis.host}") // now use local, but if deploy railway, use railway one

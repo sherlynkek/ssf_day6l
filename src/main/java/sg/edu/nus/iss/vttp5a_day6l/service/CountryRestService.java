@@ -18,12 +18,13 @@ import sg.edu.nus.iss.vttp5a_day6l.model.Country;
 
 @Service
 public class CountryRestService {
-
+    
     RestTemplate restTemplate = new RestTemplate();
 
     public List<Country> getCountries() {
-
+        
         String countryData = restTemplate.getForObject(Url.countryUrl, String.class);
+        // System.out.println(countryData);
 
         JsonReader jReader = Json.createReader(new StringReader(countryData));
         JsonObject jObject = jReader.readObject();
@@ -33,7 +34,7 @@ public class CountryRestService {
         List<Country> countries = new ArrayList<>();
 
         Set<Entry<String, JsonValue>> entries = jDataObject.entrySet();
-        for(Entry<String, JsonValue> entry: entries) {
+        for (Entry<String, JsonValue> entry : entries) {
             Country c = new Country();
             c.setCode(entry.getKey());
             c.setName(entry.getValue().asJsonObject().getString("country"));
@@ -42,5 +43,4 @@ public class CountryRestService {
 
         return countries;
     }
-
 }

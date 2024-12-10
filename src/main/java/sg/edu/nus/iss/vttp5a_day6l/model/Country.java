@@ -1,17 +1,18 @@
 package sg.edu.nus.iss.vttp5a_day6l.model;
 
 public class Country {
-    private String code;
     
+    private String code;
+
     private String name;
+    
+
+    public Country() {
+    }
 
     public Country(String code, String name) {
         this.code = code;
         this.name = name;
-    }
-
-    public Country() {
-        //TODO Auto-generated constructor stub
     }
 
     public String getCode() {
@@ -65,6 +66,5 @@ public class Country {
     public String toString() {
         return code + "," + name;
     }
-
-
+    
 }

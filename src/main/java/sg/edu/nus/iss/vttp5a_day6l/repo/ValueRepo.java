@@ -5,14 +5,16 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Repository;
 
-import sg.edu.nus.iss.vttp5a_day6l.util.*;
+import sg.edu.nus.iss.vttp5a_day6l.constant.Constant;
+
+// import sg.edu.nus.iss.vttp5a_day6l.util.*;
 
 @Repository
 public class ValueRepo {
     
     // Slide 20
     @Autowired
-    // @Qualifier(Util.template01)
+    @Qualifier(Constant.template01)
     RedisTemplate<String, String> template;
 
     // Slide 24: Create/update a value

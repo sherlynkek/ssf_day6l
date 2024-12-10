@@ -3,9 +3,12 @@ package sg.edu.nus.iss.vttp5a_day6l.repo;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 // import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.stereotype.Repository;
+
+import sg.edu.nus.iss.vttp5a_day6l.constant.Constant;
 
 // import sg.edu.nus.iss.vttp5a_day6l.util.*;
 
@@ -13,7 +16,7 @@ import org.springframework.stereotype.Repository;
 public class ListRepo {
     
     @Autowired
-    // @Qualifier(Util.template02)
+    @Qualifier(Constant.template01)
     RedisTemplate<String, String> template;
 
     public void leftPush(String key, String value) {
@@ -49,21 +52,21 @@ public class ListRepo {
         return list;
     }
 
-    public Boolean deleteItem(String key, String valueToDelete) {
-        Boolean isDeleted = false;
+    // public Boolean deleteItem(String key, String valueToDelete) {
+    //     Boolean isDeleted = false;
 
-        // Long iFound = template.opsForList().indexOf(key, valueToDelete);
+    //     // Long iFound = template.opsForList().indexOf(key, valueToDelete);
 
-        // if (iFound >= 0) {
-            template.opsForList().remove(key, 1, valueToDelete);
-            isDeleted = true;
-        // }
+    //     // if (iFound >= 0) {
+    //         template.opsForList().remove(key, 1, valueToDelete);
+    //         isDeleted = true;
+    //     // }
 
-        return isDeleted;
-    }
+    //     return isDeleted;
+    // }
 
-    public void editItem(String key, String valueToEdit, String newValue) {
-        Long indexToEdit = template.opsForList().indexOf(key, valueToEdit);
-        template.opsForList().set(key, indexToEdit, newValue);
-    }
+    // public void editItem(String key, String valueToEdit, String newValue) {
+    //     Long indexToEdit = template.opsForList().indexOf(key, valueToEdit);
+    //     template.opsForList().set(key, indexToEdit, newValue);
+    // }
 }
